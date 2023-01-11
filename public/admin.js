@@ -22,8 +22,11 @@ const updateQuantity = async () => {
                 body: JSON.stringify({'id': e.id, 'quantity': `${input.value}`})
             })
         })
+
+        let p = document.createElement('p')
+        p.textContent = e.title
         
-        li.append(e.title, input, btn)
+        li.append(p, input, btn)
         ul.append(li)
     })
 
